@@ -5,7 +5,7 @@
  */
 
 import './bootstrap';
-import { createApp } from 'vue';
+import {createApp} from 'vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -14,9 +14,8 @@ import { createApp } from 'vue';
  */
 
 const app = createApp({});
-
-import PostComponent from './components/PostComponent.vue';
-app.component('post-component', PostComponent);
+// import PostComponent from './components/PostComponent.vue';
+// app.component('post-component', PostComponent);
 
 /**
  * The following block of code may be used to automatically register your
@@ -26,9 +25,9 @@ app.component('post-component', PostComponent);
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
-//     app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
-// });
+Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
+    app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
+});
 
 /**
  * Finally, we will attach the application instance to a HTML element with
