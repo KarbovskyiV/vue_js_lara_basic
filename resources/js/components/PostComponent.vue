@@ -2,6 +2,7 @@
     <div>
         <SinglePostComponent></SinglePostComponent>
         <div>Name: {{ name }}</div>
+        <button @click="sayHello">Hello</button>
     </div>
 </template>
 
@@ -16,6 +17,12 @@ export default {
             name: 'Test',
             age: 22,
         }
+    },
+
+    methods: {
+      sayHello() {
+          console.log('Hello');
+      }
     },
 
     components: {
