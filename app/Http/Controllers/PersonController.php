@@ -10,14 +10,12 @@ class PersonController extends Controller
     {
         $persons = [
             [
-                [
-
-                    'id' => 1,
-                    'name' => 'Name',
-                    'age' => 22,
-                    'job' => 'coach',
-
-                ],
+                'id' => 1,
+                'name' => 'Name',
+                'age' => 22,
+                'job' => 'coach',
+            ],
+            [
                 'id' => 2,
                 'name' => 'Name 2',
                 'age' => 23,
@@ -42,7 +40,6 @@ class PersonController extends Controller
                 'job' => 'fifth coach',
             ],
         ];
-
         return $persons;
     }
 }
