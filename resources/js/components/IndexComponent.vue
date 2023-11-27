@@ -51,6 +51,8 @@ export default {
 
     mounted() {
         this.getPeople()
+
+        console.log(this.$parent.parentLog());
     },
 
     methods: {
@@ -85,6 +87,10 @@ export default {
 
         isEdit(id) {
             return this.editPersonId === id
+        },
+
+        indexLog() {
+            console.log('this is index component');
         }
     }
 }
