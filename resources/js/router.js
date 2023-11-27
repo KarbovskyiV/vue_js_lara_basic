@@ -1,20 +1,14 @@
-import * as VueRouter from "vue-router";
-import PostComponent from "./components/PostComponent.vue";
-import TagComponent from "./components/TagComponent.vue";
+import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
     {
-        path: '/posts',
-        component: PostComponent,
-    },
-    {
-        path: '/tags',
-        component: TagComponent,
-    },
+        path: '/people', component: () => import('./components/Person/Index.vue'),
+        name: 'person.index'
+    }
 ]
 
-const router = VueRouter.createRouter({
-    history: VueRouter.createWebHistory(),
+const router = createRouter({
+    history: createWebHistory(),
 
     routes,
 })
