@@ -21,7 +21,6 @@ export default {
     ],
 
     mounted() {
-        this.$parent.$parent.parentLog()
     },
 
     methods: {
