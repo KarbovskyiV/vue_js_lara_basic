@@ -22,7 +22,7 @@
                            class="btn btn-success">Edit</a></td>
                     <td><a href="#" @click.prevent="deletePerson(person.id)" class="btn btn-danger">Delete</a></td>
                 </tr>
-                <EditComponent :person="person" :ref="`npm run`"></EditComponent>
+                <EditComponent :person="person" :ref="`edit_${person.id}`"></EditComponent>
             </template>
             </tbody>
         </table>
