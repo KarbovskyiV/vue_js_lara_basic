@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Person\IndexController as PersonIndexController;
 use App\Http\Controllers\Person\StoreController as PersonStoreController;
 
 /*
@@ -20,5 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::prefix('people')->group(function () {
+    Route::get('/', PersonIndexController::class);
     Route::post('/', PersonStoreController::class);
 });
