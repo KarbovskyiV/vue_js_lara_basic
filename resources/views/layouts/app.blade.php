@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app" class="p-5">
-
+        @yield('content')
     </div>
 </body>
 </html>
