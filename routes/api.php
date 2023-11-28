@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Person\IndexController as PersonIndexController;
 use App\Http\Controllers\Person\StoreController as PersonStoreController;
+use App\Http\Controllers\Person\ShowController as PersonShowController;
 use App\Http\Controllers\Person\UpdateController as PersonUpdateController;
 use App\Http\Controllers\Person\DeleteController as PersonDeleteController;
 
@@ -25,6 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('people')->group(function () {
     Route::get('/', PersonIndexController::class);
     Route::post('/', PersonStoreController::class);
+    Route::get('/{person}', PersonShowController::class);
     Route::patch('/{person}', PersonUpdateController::class);
     Route::delete('/{person}', PersonDeleteController::class);
 });
